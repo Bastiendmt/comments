@@ -1,0 +1,25 @@
+<%- include('../pages/header') %>
+
+<div class="ui comments">
+    <h3 class="ui dividing header">Commentaires</h3>
+
+    <% console.log(message) %>
+        <div class="comment">
+            <a class="avatar" href="/message/<%= message.id %>">
+                <img src="https://icon-library.com/images/avatar-icon-images/avatar-icon-images-4.jpg">
+            </a>
+            <div class="metadata">
+                <div class="date">
+                    <%= message.created_at.fromNow() %>
+                </div>
+            </div>
+            <div class="content">
+                <div class="test">
+                    <%= message.content %>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+<%- include('../pages/footer') %>
