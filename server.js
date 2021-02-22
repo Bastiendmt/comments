@@ -9,7 +9,6 @@ const { removeAllListeners } = require('./config/db')
 app.set('view engine', 'ejs')
 
 //Middleware
-app.use('/assets', express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(session({
