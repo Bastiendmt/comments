@@ -27,7 +27,7 @@ class Message {
     }
 
     static all(callback) {
-        connection.query('SELECT * FROM  messages', (err, rows) => {
+        connection.query('SELECT * FROM  messages ORDER BY created_at DESC', (err, rows) => {
             if (err) throw err;
             callback(rows.map((row) => new Message(row)))
         })
